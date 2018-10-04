@@ -22,12 +22,9 @@ def get_scatter_features(data_loader, dataset_name, num_layers=2):
         # M, N: input image size
         # J: number of layers
         data = data.cuda()
-        # print(data.size())
-        # print(data.size(data.dim()-2), data.size(data.dim()-1))
         scat = Scattering(M=data.size(data.dim()-2), N=data.size(data.dim()-1), J=num_layers).cuda()
         out = scat(data)
         out = out.squeeze()
-        # print("out", out.size())
 
         for i in range(len(out)):
             feat = out[i]
