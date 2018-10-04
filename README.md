@@ -4,5 +4,5 @@ Code for generating scatternet features on MNIST, Fashion-MNIST, and CiFAR-10. S
 Command: `python scatternet_feature_extractor.py`
 
 ## Requirement:
-+ Python 3.5 or newer
++ Python 2.7 (not compatible with 3.5 or later)
 + Pytorch 0.4
